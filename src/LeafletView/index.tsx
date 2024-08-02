@@ -26,10 +26,10 @@ const LEAFLET_HTML_SOURCE = Platform.select({
 const DEFAULT_MAP_LAYERS = [
   {
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      '',
     baseLayerIsChecked: true,
-    baseLayerName: 'OpenStreetMap.Mapnik',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    baseLayerName: 'GoogleMap',
+    url: 'https://www.google.com/maps/vt?lyrs=m@500&gl=vi&x={x}&y={y}&z={z}',
   },
 ];
 
