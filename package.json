@@ -1,6 +1,6 @@
 {
-  "name": "react-native-leaflet-view",
-  "version": "0.1.2",
+  "name": "@kmn988/react-native-leaflet-webview",
+  "version": "0.0.1",
   "description": "A LeafletView component using WebView and Leaflet map for React Native applications",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,16 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/pavel-corsaghin/react-native-leaflet",
-  "author": "Hung Nguyen <hungnm.k52tnvlkt@gmail.com> (https://github.com/pavel-corsaghin)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmn988/react-native-leaflet.git"
+  },
+  "author": "Khoi Nguyen (https://github.com/kmn988)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pavel-corsaghin/react-native-leaflet/issues"
+    "url": "https://github.com/kmn988/react-native-leaflet/issues"
   },
-  "homepage": "https://github.com/pavel-corsaghin/react-native-leaflet#readme",
+  "homepage": "https://github.com/kmn988/react-native-leaflet#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -153,5 +156,8 @@
         }
       ]
     ]
+  },
+  "directories": {
+    "example": "example"
   }
 }
