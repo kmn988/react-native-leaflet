@@ -1,6 +1,6 @@
 {
   "name": "@kmn988/react-native-leaflet-webview",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A LeafletView component using WebView and Leaflet map for React Native applications",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
