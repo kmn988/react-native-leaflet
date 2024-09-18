@@ -25,8 +25,7 @@ const LEAFLET_HTML_SOURCE = Platform.select({
 
 const DEFAULT_MAP_LAYERS = [
   {
-    attribution:
-      '',
+    attribution: '',
     baseLayerIsChecked: true,
     baseLayerName: 'GoogleMap',
     url: 'https://www.google.com/maps/vt?lyrs=m@500&gl=vi&x={x}&y={y}&z={z}',
@@ -52,18 +51,18 @@ export type LeafletViewProps = {
 };
 
 const LeafletView: React.FC<LeafletViewProps> = ({
-  renderLoading,
+  renderLoading = () => <LoadingIndicator />,
   onError,
   onLoadEnd,
   onLoadStart,
   onMessageReceived,
-  mapLayers,
+  mapLayers = DEFAULT_MAP_LAYERS,
   mapMarkers,
   mapShapes,
   mapCenterPosition,
   ownPositionMarker,
-  zoom,
-  doDebug,
+  zoom = DEFAULT_ZOOM,
+  doDebug = __DEV__,
   androidHardwareAccelerationDisabled,
 }) => {
   const webViewRef = useRef<WebView>(null);
@@ -180,9 +179,9 @@ const LeafletView: React.FC<LeafletViewProps> = ({
       return;
     }
     sendMessage({
-	  ...ownPositionMarker,
-	  id: OWN_POSTION_MARKER_ID
-	});
+      ...ownPositionMarker,
+      id: OWN_POSTION_MARKER_ID,
+    });
   }, [initialized, ownPositionMarker, sendMessage]);
 
   //Handle mapCenterPosition update
@@ -221,13 +220,6 @@ const LeafletView: React.FC<LeafletViewProps> = ({
       androidHardwareAccelerationDisabled={androidHardwareAccelerationDisabled}
     />
   );
-};
-
-LeafletView.defaultProps = {
-  renderLoading: () => <LoadingIndicator />,
-  mapLayers: DEFAULT_MAP_LAYERS,
-  zoom: DEFAULT_ZOOM,
-  doDebug: __DEV__,
 };
 
 const styles = StyleSheet.create({
